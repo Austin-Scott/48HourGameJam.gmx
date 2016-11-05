@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>max_enemies=3;
+            <string>max_enemies=9;
 spawning=false;
 </string>
           </argument>

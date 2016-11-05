@@ -213,6 +213,11 @@ isfizzy=false;
     can_jump=true;
     }
 } else  {
+if(distance_to_object(obj_player)&gt;400)   {
+    idle=true;
+    auto_jump=false;
+    can_jump=true;
+    }
 if(abs(phy_linear_velocity_x)&lt;100)   {
 if(x&gt;obj_player.x)   {
 moveLeft(id);
