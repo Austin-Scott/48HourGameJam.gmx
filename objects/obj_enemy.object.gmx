@@ -93,25 +93,25 @@ isfizzy=false;
       </action>
       <action>
         <libid>1</libid>
-        <id>543</id>
+        <id>301</id>
         <kind>0</kind>
-        <userelative>0</userelative>
+        <userelative>-1</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_sprite_color</functionname>
+        <functionname>action_set_alarm</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>13</kind>
-            <string>16777088</string>
+            <kind>0</kind>
+            <string>random(60)</string>
           </argument>
           <argument>
-            <kind>0</kind>
-            <string>1</string>
+            <kind>4</kind>
+            <string>2</string>
           </argument>
         </arguments>
       </action>
@@ -153,25 +153,53 @@ isfizzy=false;
       </action>
       <action>
         <libid>1</libid>
-        <id>202</id>
+        <id>541</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_change_object</functionname>
+        <functionname>action_sprite_set</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>10</kind>
-            <object>nothing</object>
+            <kind>5</kind>
+            <sprite>spr_enemyPlaceHolder</sprite>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>random(60)</string>
           </argument>
           <argument>
             <kind>4</kind>
-            <string>0</string>
+            <string>2</string>
           </argument>
         </arguments>
       </action>
@@ -233,6 +261,30 @@ isfizzy=false;
     <event eventtype="2" enumb="2">
       <action>
         <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>2</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>3</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>541</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -256,30 +308,6 @@ isfizzy=false;
           <argument>
             <kind>0</kind>
             <string>1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>2</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>3</string>
           </argument>
         </arguments>
       </action>
@@ -382,28 +410,31 @@ image_xscale=abs(image_xscale);
 }
 }
 }
+if(distance_to_object(obj_player)&lt;30)   {
+
+if(isfizzy)   {
+
+obj_player.alarm[1]=30;
+obj_player.stunned=true;
+velx=phy_linear_velocity_x;
+vely=phy_linear_velocity_y;
+with(obj_player)  {
+currentmax=maxshake;
+}
+instance_change(obj_enemyFake,true);
+phy_linear_velocity_x=velx;
+phy_linear_velocity_y=vely;
+
+
+} 
+
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="4" ename="obj_melee">
-      <action>
-        <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_bullet">
       <action>
         <libid>1</libid>
         <id>203</id>
@@ -644,6 +675,58 @@ can_jump=true;
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_bullet">
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_player">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Event handling moved to step event code</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>223</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_current_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>

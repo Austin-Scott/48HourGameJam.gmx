@@ -54,6 +54,13 @@ dir=1;
 gun=0; //0=no gun, 1=basic gun
 melee=0; //0=no gun, 1=basic melee
 stunned = false;
+
+
+shakedir=1; //1=move screen to the right; -1 = move to the left
+maxshake=10; //max number of pixels the screen can shake in either direction
+currentshake=0; //stores the current shake offset
+currentmax=0; //stores the current max shake distance
+reducer=1; //how quickly does the shake reduce
 </string>
           </argument>
         </arguments>
@@ -130,6 +137,28 @@ image_xscale=abs(image_xscale);
 } else  {
 image_xscale=-abs(image_xscale);
 }
+
+if(abs(currentmax)&gt;0)   {
+if(shakedir&gt;0)   {
+if(currentshake&lt;currentmax)   {
+currentshake+=1;
+} else  {
+shakedir= -1;
+currentmax-=reducer;
+}
+} else {
+if(currentshake&gt; -currentmax)   {
+currentshake-=1;
+} else  {
+shakedir= 1;
+currentmax-=reducer;
+}
+}
+view_xport[0]+=currentshake;
+} else  {
+view_xport[0]=0;
+}
+
 </string>
           </argument>
         </arguments>
@@ -210,181 +239,6 @@ image_xscale=-abs(image_xscale);
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="4" ename="obj_enemy">
-      <action>
-        <libid>1</libid>
-        <id>408</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if</functionname>
-        <codestring></codestring>
-        <whoName>other</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>isfizzy</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>stunned = true;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>3</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
-        <codestring></codestring>
-        <whoName>other</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>3</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>2</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>421</id>
-        <kind>3</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>223</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_current_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_solid">
       <action>
         <libid>1</libid>
@@ -411,24 +265,54 @@ image_xscale=-abs(image_xscale);
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_enemy">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event moved to obj_enemy</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="5" enumb="68">
       <action>
         <libid>1</libid>
-        <id>408</id>
+        <id>612</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>-1</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_if</functionname>
+        <functionname>action_if_variable</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
-        <isnot>-1</isnot>
+        <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>0</kind>
             <string>stunned</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -487,21 +371,29 @@ moveRight(id);
     <event eventtype="5" enumb="65">
       <action>
         <libid>1</libid>
-        <id>408</id>
+        <id>612</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>-1</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_if</functionname>
+        <functionname>action_if_variable</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
-        <isnot>-1</isnot>
+        <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>0</kind>
             <string>stunned</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -560,21 +452,29 @@ moveRight(id);
     <event eventtype="5" enumb="39">
       <action>
         <libid>1</libid>
-        <id>408</id>
+        <id>612</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>-1</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_if</functionname>
+        <functionname>action_if_variable</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
-        <isnot>-1</isnot>
+        <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>0</kind>
             <string>stunned</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -634,21 +534,29 @@ moveRight(id);
     <event eventtype="5" enumb="37">
       <action>
         <libid>1</libid>
-        <id>408</id>
+        <id>612</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>-1</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_if</functionname>
+        <functionname>action_if_variable</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
-        <isnot>-1</isnot>
+        <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>0</kind>
             <string>stunned</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>

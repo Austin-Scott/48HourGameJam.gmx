@@ -31,6 +31,8 @@
       <sprite>sprites\spr_back</sprite>
       <sprite>sprites\ui_cuts</sprite>
     </sprites>
+    <sprite>sprites\spr_SolidRampRight</sprite>
+    <sprite>sprites\spr_SolidRampLeft</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -51,6 +53,9 @@
       <object>objects\obj_levelchange</object>
       <object>objects\nothing</object>
       <object>objects\obj_almost_solid</object>
+      <object>objects\obj_solidRampRight</object>
+      <object>objects\obj_solidRampLeft</object>
+      <object>objects\obj_enemyFake</object>
     </objects>
     <objects name="trigger(not the anime studio)">
       <object>objects\obj_jump</object>
