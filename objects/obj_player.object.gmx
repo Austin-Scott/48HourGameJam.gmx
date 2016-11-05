@@ -51,7 +51,8 @@
             <kind>1</kind>
             <string>phy_fixed_rotation=true;
 dir=1;
-
+gun=0; //0=no gun, 1=basic gun
+melee=0; //0=no gun, 1=basic melee
 </string>
           </argument>
         </arguments>
@@ -108,6 +109,81 @@ image_xscale=-abs(image_xscale);
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_pickupMelee">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>melee=1;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_pickupGun">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>gun=1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="4" ename="obj_solid">
@@ -308,7 +384,9 @@ jump(id);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>meleeAttack(id, dir);
+            <string>if(melee==1)   {
+meleeAttack(id, dir);
+}
 </string>
           </argument>
         </arguments>
@@ -331,7 +409,9 @@ jump(id);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>fireGun(id,dir);
+            <string>if(gun==1)  {
+fireGun(id,dir);
+}
 </string>
           </argument>
         </arguments>
