@@ -4,9 +4,7 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound">
-    <sound>sound\snd_background</sound>
-  </sounds>
+  <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_PlayerPlaceholder</sprite>
     <sprite>sprites\spr_SolidPlaceholder</sprite>
@@ -38,14 +36,8 @@
     <sprites name="GameObjects">
       <sprites name="player">
         <sprite>sprites\spr_player_standing</sprite>
-        <sprite>sprites\spr_player_walk</sprite>
       </sprites>
     </sprites>
-<<<<<<< HEAD
-    <sprite>sprites\sprite26</sprite>
-=======
-    <sprite>sprites\spr_killblock</sprite>
->>>>>>> origin/master
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -88,7 +80,6 @@
       <object>objects\ui</object>
     </objects>
     <object>objects\obj_control</object>
-    <object>objects\obj_killblock</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\main</room>
