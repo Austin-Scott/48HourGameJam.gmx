@@ -15,6 +15,7 @@
     <sprite>sprites\spr_spawnerPlaceholder</sprite>
     <sprite>sprites\spr_gunPlaceholder</sprite>
     <sprite>sprites\spr_meleePlaceholder</sprite>
+    <sprite>sprites\spr_fiz_enemy_PlaceHolder</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
