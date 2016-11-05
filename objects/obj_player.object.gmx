@@ -1269,7 +1269,7 @@ jump(id);
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>1</PhysicsObjectShape>
-  <PhysicsObjectDensity>0.100000001490116</PhysicsObjectDensity>
+  <PhysicsObjectDensity>0.0199999995529652</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>0.5</PhysicsObjectLinearDamping>
@@ -1279,8 +1279,8 @@ jump(id);
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
     <point>0,0</point>
-    <point>48,0</point>
-    <point>48,136</point>
-    <point>0,136</point>
+    <point>112,0</point>
+    <point>112,240</point>
+    <point>0,240</point>
   </PhysicsShapePoints>
 </object>
