@@ -86,9 +86,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\main</room>
-    <room>rooms\ctsn</room>
     <room>rooms\room1</room>
     <room>rooms\room0</room>
+    <room>rooms\ctsn</room>
     <room>rooms\settings</room>
   </rooms>
   <help>
