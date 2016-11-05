@@ -37,8 +37,8 @@
     </sprites>
     <sprites name="GameObjects">
       <sprites name="player">
-        <sprite>sprites\spr_player_standing</sprite>
         <sprite>sprites\spr_player_walking</sprite>
+        <sprite>sprites\spr_player_standing</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -53,11 +53,11 @@
   </scripts>
   <objects name="objects">
     <objects name="Gameplay Objects">
-      <object>objects\obj_player</object>
       <object>objects\obj_enemy</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_spawner</object>
       <object>objects\obj_solid</object>
+      <object>objects\obj_player</object>
       <object>objects\obj_levelchange</object>
       <object>objects\nothing</object>
       <object>objects\obj_almost_solid</object>
