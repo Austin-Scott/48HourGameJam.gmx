@@ -56,11 +56,6 @@ melee=0; //0=no gun, 1=basic melee
 stunned = false;
 
 
-shakedir=1; //1=move screen to the right; -1 = move to the left
-maxshake=10; //max number of pixels the screen can shake in either direction
-currentshake=0; //stores the current shake offset
-currentmax=0; //stores the current max shake distance
-reducer=1; //how quickly does the shake reduce
 </string>
           </argument>
         </arguments>
@@ -138,26 +133,6 @@ image_xscale=abs(image_xscale);
 image_xscale=-abs(image_xscale);
 }
 
-if(abs(currentmax)&gt;0)   {
-if(shakedir&gt;0)   {
-if(currentshake&lt;currentmax)   {
-currentshake+=1;
-} else  {
-shakedir= -1;
-currentmax-=reducer;
-}
-} else {
-if(currentshake&gt; -currentmax)   {
-currentshake-=1;
-} else  {
-shakedir= 1;
-currentmax-=reducer;
-}
-}
-view_xport[0]+=currentshake;
-} else  {
-view_xport[0]=0;
-}
 
 </string>
           </argument>

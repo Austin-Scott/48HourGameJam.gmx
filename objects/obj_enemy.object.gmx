@@ -418,7 +418,7 @@ obj_player.alarm[1]=30;
 obj_player.stunned=true;
 velx=phy_linear_velocity_x;
 vely=phy_linear_velocity_y;
-with(obj_player)  {
+with(obj_control)  {
 currentmax=maxshake;
 }
 instance_change(obj_enemyFake,true);
