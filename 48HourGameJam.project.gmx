@@ -36,6 +36,7 @@
     <sprites name="GameObjects">
       <sprites name="player">
         <sprite>sprites\spr_player_standing</sprite>
+        <sprite>sprites\spr_player_walking</sprite>
       </sprites>
     </sprites>
   </sprites>
