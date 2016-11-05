@@ -33,6 +33,15 @@
     </sprites>
     <sprite>sprites\spr_SolidRampRight</sprite>
     <sprite>sprites\spr_SolidRampLeft</sprite>
+    <sprites name="GameObjects">
+      <sprites name="player">
+        <sprite>sprites\spr_player_standing</sprite>
+        <sprite>sprites\spr_player_walk_a</sprite>
+        <sprite>sprites\spr_player_walk_b</sprite>
+        <sprite>sprites\spr_player_walk_c</sprite>
+        <sprite>sprites\spr_player_walk_d</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

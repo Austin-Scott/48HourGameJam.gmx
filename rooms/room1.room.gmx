@@ -76,7 +76,7 @@
     <instance objName="obj_solid" x="160" y="736" name="inst_27DEDCBD" locked="0" code="" scaleX="7" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid" x="1536" y="960" name="inst_0E32C440" locked="0" code="" scaleX="7" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid" x="1312" y="608" name="inst_74DE2F16" locked="0" code="" scaleX="7" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="212" y="161" name="inst_02381780" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="256" y="384" name="inst_02381780" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_jump" x="613" y="471" name="inst_1C300116" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_jump" x="930" y="601" name="inst_714E8224" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_jump" x="1060" y="691" name="inst_DA112FB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
