@@ -1481,7 +1481,11 @@ jump(id);
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>1</PhysicsObjectShape>
+<<<<<<< HEAD
   <PhysicsObjectDensity>0.025000000372529</PhysicsObjectDensity>
+=======
+  <PhysicsObjectDensity>0.0199999995529652</PhysicsObjectDensity>
+>>>>>>> origin/master
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>0.5</PhysicsObjectLinearDamping>
@@ -1490,9 +1494,16 @@ jump(id);
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
+<<<<<<< HEAD
     <point>64,0</point>
     <point>144,0</point>
     <point>144,240</point>
     <point>64,240</point>
+=======
+    <point>0,0</point>
+    <point>112,0</point>
+    <point>112,240</point>
+    <point>0,240</point>
+>>>>>>> origin/master
   </PhysicsShapePoints>
 </object>
