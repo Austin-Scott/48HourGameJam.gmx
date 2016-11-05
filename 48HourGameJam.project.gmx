@@ -8,14 +8,29 @@
   <sprites name="sprites">
     <sprite>sprites\spr_PlayerPlaceholder</sprite>
     <sprite>sprites\spr_SolidPlaceholder</sprite>
-    <sprite>sprites\spr_enemyPlaceHolder</sprite>
+    <sprite>sprites\spr_SolidFizzel</sprite>
+    <sprites name="Enemy">
+      <sprite>sprites\spr_enemyPlaceHolder</sprite>
+      <sprite>sprites\spr_enemyfiz_a</sprite>
+      <sprite>sprites\spr_enemyfiz_b</sprite>
+    </sprites>
     <sprite>sprites\spr_jumpindicator</sprite>
     <sprite>sprites\spr_placeholderbullet</sprite>
     <sprite>sprites\spr_attackplaceholder</sprite>
     <sprite>sprites\spr_spawnerPlaceholder</sprite>
     <sprite>sprites\spr_gunPlaceholder</sprite>
     <sprite>sprites\spr_meleePlaceholder</sprite>
-    <sprite>sprites\spr_fiz_enemy_PlaceHolder</sprite>
+    <sprite>sprites\spr_timePortal</sprite>
+    <sprite>sprites\spr_timeMachinePiece</sprite>
+    <sprites name="ui">
+      <sprite>sprites\play</sprite>
+      <sprite>sprites\gear</sprite>
+      <sprite>sprites\Title</sprite>
+      <sprite>sprites\Moar_Title_s</sprite>
+      <sprite>sprites\Title_s</sprite>
+      <sprite>sprites\spr_back</sprite>
+      <sprite>sprites\ui_cuts</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -27,19 +42,40 @@
     <script>scripts\meleeAttack.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_player</object>
-    <object>objects\obj_solid</object>
-    <object>objects\obj_enemy</object>
-    <object>objects\obj_jump</object>
-    <object>objects\obj_bullet</object>
-    <object>objects\obj_melee</object>
-    <object>objects\obj_spawner</object>
-    <object>objects\obj_pickupGun</object>
-    <object>objects\obj_pickupMelee</object>
+    <objects name="Gameplay Objects">
+      <object>objects\obj_player</object>
+      <object>objects\obj_enemy</object>
+      <object>objects\obj_bullet</object>
+      <object>objects\obj_spawner</object>
+      <object>objects\obj_solid</object>
+      <object>objects\obj_levelchange</object>
+      <object>objects\nothing</object>
+      <object>objects\obj_almost_solid</object>
+    </objects>
+    <objects name="trigger(not the anime studio)">
+      <object>objects\obj_jump</object>
+      <object>objects\obj_melee</object>
+      <object>objects\obj_pickupGun</object>
+      <object>objects\obj_pickupMelee</object>
+    </objects>
+    <objects name="ui">
+      <object>objects\btn_settings</object>
+      <object>objects\ts_settings</object>
+      <object>objects\ts_title</object>
+      <object>objects\btn_back</object>
+      <object>objects\ts_settings_b</object>
+      <object>objects\ui_cutscene</object>
+      <object>objects\btn_play</object>
+      <object>objects\ui_obj_timetravel</object>
+      <object>objects\ui</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\main</room>
+    <room>rooms\ctsn</room>
     <room>rooms\room1</room>
     <room>rooms\room0</room>
+    <room>rooms\settings</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
