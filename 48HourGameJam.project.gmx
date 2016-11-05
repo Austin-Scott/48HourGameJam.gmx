@@ -20,6 +20,8 @@
     <sprite>sprites\spr_spawnerPlaceholder</sprite>
     <sprite>sprites\spr_gunPlaceholder</sprite>
     <sprite>sprites\spr_meleePlaceholder</sprite>
+    <sprite>sprites\spr_SolidRampRight</sprite>
+    <sprite>sprites\spr_SolidRampLeft</sprite>
     <sprite>sprites\spr_timePortal</sprite>
     <sprite>sprites\spr_timeMachinePiece</sprite>
     <sprites name="ui">
@@ -31,15 +33,10 @@
       <sprite>sprites\spr_back</sprite>
       <sprite>sprites\ui_cuts</sprite>
     </sprites>
-    <sprite>sprites\spr_SolidRampRight</sprite>
-    <sprite>sprites\spr_SolidRampLeft</sprite>
     <sprites name="GameObjects">
       <sprites name="player">
         <sprite>sprites\spr_player_standing</sprite>
-        <sprite>sprites\spr_player_walk_a</sprite>
-        <sprite>sprites\spr_player_walk_b</sprite>
-        <sprite>sprites\spr_player_walk_c</sprite>
-        <sprite>sprites\spr_player_walk_d</sprite>
+        <sprite>sprites\spr_player_walk</sprite>
       </sprites>
     </sprites>
   </sprites>
