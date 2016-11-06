@@ -60,6 +60,9 @@
     <script>scripts\fireGun.gml</script>
     <script>scripts\meleeAttack.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\rock</font>
+  </fonts>
   <objects name="objects">
     <objects name="Gameplay Objects">
       <object>objects\obj_enemy</object>
