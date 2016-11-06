@@ -15,6 +15,7 @@
       <sprite>sprites\spr_enemyfiz_b</sprite>
     </sprites>
     <sprite>sprites\spr_jumpindicator</sprite>
+    <sprite>sprites\spr_idleturnindicator</sprite>
     <sprite>sprites\spr_placeholderbullet</sprite>
     <sprite>sprites\spr_attackplaceholder</sprite>
     <sprite>sprites\spr_spawnerPlaceholder</sprite>
@@ -81,9 +82,11 @@
       <object>objects\ui</object>
     </objects>
     <object>objects\obj_control</object>
+    <object>objects\obj_turnindicator</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\main</room>
+    <room>rooms\room5</room>
     <room>rooms\room1</room>
     <room>rooms\room0</room>
     <room>rooms\ctsn</room>

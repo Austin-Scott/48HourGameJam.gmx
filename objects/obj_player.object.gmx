@@ -133,7 +133,36 @@ image_xscale=abs(image_xscale);
 image_xscale=-abs(image_xscale);
 }
 
+if(!stunned)   {
+if(keyboard_check(ord('A')))  {
+if(can_jump)   {
+sprite_index = spr_player_walking;
+image_speed = 1/6;
+} else  {
+sprite_index = spr_player_standing;
+}
+moveLeft(id);
+dir = -1;
+} else if(keyboard_check(ord('D')))  {
+if(can_jump)   {
+sprite_index = spr_player_walking;
+image_speed = 1/6;
+} else  {
+sprite_index = spr_player_standing;
+}
+moveRight(id);
+dir = 1;
+} else  {
+sprite_index = spr_player_standing;
+image_speed = 1/6;
 
+}
+} else  {
+
+}
+
+
+can_jump=false;
 </string>
           </argument>
         </arguments>
@@ -262,32 +291,24 @@ image_xscale=-abs(image_xscale);
         </arguments>
       </action>
     </event>
-    <event eventtype="5" enumb="68">
+    <event eventtype="6" enumb="54">
       <action>
         <libid>1</libid>
-        <id>612</id>
+        <id>408</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>-1</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
+        <functionname>action_if</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
-        <isnot>0</isnot>
+        <isnot>-1</isnot>
         <arguments>
           <argument>
             <kind>0</kind>
             <string>stunned</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>false</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -321,9 +342,22 @@ image_xscale=-abs(image_xscale);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dir=1;
-moveRight(id);
-
+            <string>///fireGun(id, dir)
+instance=0;
+with (id) {
+instance=instance_create(phy_position_x,phy_position_y,obj_bullet);
+}
+if(dir&gt;0)  {
+with(instance)  {
+physics_apply_local_impulse(0,0,500,-50);
+dir=1;
+}
+} else {
+with(instance) {
+physics_apply_local_impulse(0,0,-500,-50);
+dir=-1;
+}
+}
 </string>
           </argument>
         </arguments>
@@ -343,32 +377,24 @@ moveRight(id);
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="5" enumb="65">
+    <event eventtype="6" enumb="53">
       <action>
         <libid>1</libid>
-        <id>612</id>
+        <id>408</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>-1</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
+        <functionname>action_if</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
-        <isnot>0</isnot>
+        <isnot>-1</isnot>
         <arguments>
           <argument>
             <kind>0</kind>
             <string>stunned</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>false</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -402,173 +428,9 @@ moveRight(id);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dir=-1;
-    moveLeft(id);
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="5" enumb="39">
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>stunned</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>false</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>dir=1;
-
-    moveRight(id);
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="5" enumb="37">
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>stunned</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>false</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>dir=-1;
-
-moveLeft(id);
-
+            <string>if(melee==1)   {
+meleeAttack(id, dir);
+}
 </string>
           </argument>
         </arguments>
