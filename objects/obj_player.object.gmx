@@ -556,8 +556,9 @@ meleeAttack(id, dir);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if(alive)  {
 jump(id);
+}
 
 </string>
           </argument>
