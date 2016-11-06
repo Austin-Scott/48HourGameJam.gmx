@@ -88,7 +88,6 @@
       <object>objects\ui_obj_timetravel</object>
       <object>objects\ui</object>
     </objects>
-    <object>objects\obj_playerDead</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\main</room>
