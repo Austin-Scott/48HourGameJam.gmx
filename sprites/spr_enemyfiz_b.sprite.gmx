@@ -3,12 +3,21 @@
   <type>0</type>
   <xorig>63</xorig>
   <yorigin>52</yorigin>
+<<<<<<< HEAD
   <colkind>1</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>2</bboxmode>
   <bbox_left>29</bbox_left>
   <bbox_right>86</bbox_right>
+=======
+  <colkind>3</colkind>
+  <coltolerance>0</coltolerance>
+  <sepmasks>0</sepmasks>
+  <bboxmode>0</bboxmode>
+  <bbox_left>0</bbox_left>
+  <bbox_right>125</bbox_right>
+>>>>>>> origin/master
   <bbox_top>0</bbox_top>
   <bbox_bottom>103</bbox_bottom>
   <HTile>0</HTile>
