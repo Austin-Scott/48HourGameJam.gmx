@@ -46,6 +46,8 @@
       </sprites>
       <sprites name="misc">
         <sprite>sprites\spr_lazer_bullet</sprite>
+        <sprite>sprites\spr_splash</sprite>
+        <sprite>sprites\spr_title</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -89,6 +91,7 @@
       <object>objects\btn_play</object>
       <object>objects\ui_obj_timetravel</object>
       <object>objects\ui</object>
+      <object>objects\obj_title</object>
     </objects>
   </objects>
   <rooms name="rooms">
