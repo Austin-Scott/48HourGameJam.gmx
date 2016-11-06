@@ -68,7 +68,6 @@
       <object>objects\obj_almost_solid</object>
       <object>objects\obj_solidRampRight</object>
       <object>objects\obj_solidRampLeft</object>
-      <object>objects\obj_enemyFake</object>
     </objects>
     <objects name="trigger(not the anime studio)">
       <object>objects\obj_jump</object>
