@@ -56,13 +56,7 @@
     <instance objName="obj_solid" x="1984" y="0" name="inst_64BB43E7" locked="0" code="" scaleX="1" scaleY="23" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid" x="32" y="0" name="inst_A8DBB62A" locked="0" code="" scaleX="61" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="128" y="608" name="inst_CF60FD13" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spawner" x="576" y="576" name="inst_E0DD5E10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spawner" x="1024" y="576" name="inst_FD1DC37E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spawner" x="1472" y="576" name="inst_5263AE6E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_turnindicator" x="416" y="704" name="inst_83D101EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_turnindicator" x="704" y="704" name="inst_02D101D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_turnindicator" x="896" y="704" name="inst_A17FEFC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_turnindicator" x="1120" y="704" name="inst_579C139B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_turnindicator" x="1344" y="704" name="inst_CEDD873F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_turnindicator" x="1568" y="704" name="inst_BE0E706E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_levelchange" x="1920" y="672" name="inst_66AE3718" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

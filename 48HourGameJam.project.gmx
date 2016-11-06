@@ -98,6 +98,7 @@
       <object>objects\ui</object>
       <object>objects\obj_title</object>
     </objects>
+    <object>objects\obj_recharge</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\main</room>
