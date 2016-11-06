@@ -54,6 +54,7 @@ dir=1;
 gun=0; //0=no gun, 1=basic gun
 melee=0; //0=no gun, 1=basic melee
 stunned = false;
+alive=true;
 
 
 </string>
@@ -132,14 +133,16 @@ image_xscale=abs(image_xscale);
 } else  {
 image_xscale=-abs(image_xscale);
 }
-
+if(alive)   {
 if(!stunned)   {
 if(keyboard_check(ord('A')))  {
 if(can_jump)   {
 sprite_index = spr_player_walking;
 image_speed = 1/6;
 } else  {
-sprite_index = spr_player_standing;
+sprite_index = spr_player_jump;
+image_index=1;
+image_speed=0;
 }
 moveLeft(id);
 dir = -1;
@@ -148,7 +151,9 @@ if(can_jump)   {
 sprite_index = spr_player_walking;
 image_speed = 1/6;
 } else  {
-sprite_index = spr_player_standing;
+sprite_index = spr_player_jump;
+image_index=1;
+image_speed=0;
 }
 moveRight(id);
 dir = 1;
@@ -160,7 +165,14 @@ image_speed = 1/6;
 } else  {
 
 }
-
+} else  {
+sprite_index=spr_player_die;
+if(image_index&lt;3)   {
+image_speed=1/30;
+} else  {
+room_restart();
+}
+}
 
 can_jump=false;
 </string>
@@ -272,12 +284,12 @@ can_jump=false;
     <event eventtype="4" ename="obj_enemy">
       <action>
         <libid>1</libid>
-        <id>605</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
@@ -286,7 +298,8 @@ can_jump=false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event moved to obj_enemy</string>
+            <string>alive=false;
+</string>
           </argument>
         </arguments>
       </action>

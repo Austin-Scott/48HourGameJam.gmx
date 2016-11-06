@@ -54,7 +54,6 @@
     <script>scripts\fireGun.gml</script>
     <script>scripts\meleeAttack.gml</script>
   </scripts>
-  <fonts name="fonts"/>
   <objects name="objects">
     <objects name="Gameplay Objects">
       <object>objects\obj_enemy</object>
@@ -88,6 +87,7 @@
       <object>objects\ui_obj_timetravel</object>
       <object>objects\ui</object>
     </objects>
+    <object>objects\obj_playerDead</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\main</room>
