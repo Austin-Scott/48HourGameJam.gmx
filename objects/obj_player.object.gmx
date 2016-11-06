@@ -1160,9 +1160,9 @@ jump(id);
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>64,0</point>
-    <point>144,0</point>
-    <point>144,240</point>
-    <point>64,240</point>
+    <point>80,0</point>
+    <point>128,0</point>
+    <point>128,240</point>
+    <point>80,240</point>
   </PhysicsShapePoints>
 </object>
