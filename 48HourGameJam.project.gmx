@@ -43,6 +43,8 @@
         <sprite>sprites\spr_enemyPlaceHolder</sprite>
         <sprite>sprites\spr_enemyfiz_a</sprite>
         <sprite>sprites\spr_enemyfiz_b</sprite>
+        <sprite>sprites\spr_enemy</sprite>
+        <sprite>sprites\spr_enemyAttack</sprite>
       </sprites>
       <sprites name="misc">
         <sprite>sprites\spr_lazer_bullet</sprite>
