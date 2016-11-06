@@ -842,9 +842,9 @@ instance_create(x,y,obj_recharge);
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>32,0</point>
-    <point>80,0</point>
-    <point>80,112</point>
-    <point>32,112</point>
+    <point>64,0</point>
+    <point>160,0</point>
+    <point>160,208</point>
+    <point>64,208</point>
   </PhysicsShapePoints>
 </object>
