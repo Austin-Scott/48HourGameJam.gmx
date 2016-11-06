@@ -319,36 +319,6 @@ can_jump=false;
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="57">
-      <action>
-        <libid>1</libid>
-        <id>541</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sprite_set</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>5</kind>
-            <sprite>spr_player_standing</sprite>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="6" enumb="54">
       <action>
         <libid>1</libid>
@@ -402,27 +372,28 @@ can_jump=false;
             <kind>1</kind>
             <string>///fireGun(id, dir)
 if(alive and !walking and global.charge &gt; 12)  {
-instance=0;
-with (id) {
-instance=instance_create(phy_position_x,phy_position_y,obj_bullet);
-}
-if(dir&gt;0)  {
-with(instance)  {
-physics_apply_local_impulse(0,0,500,-50);
-dir=1;
-}
-} else {
-with(instance) {
-physics_apply_local_impulse(0,0,-500,-50);
-dir=-1;
-}
-}
-global.charge = global.charge - 10;
-gundrawn=true;
-sprite_index=spr_player_fire_gun;
-image_speed=1/30;
-image_index=1;
-image_index=2;
+
+    instance=0;
+    with (id) {
+        instance=instance_create(phy_position_x,phy_position_y,obj_bullet);
+    }
+    if(dir&gt;0)  {
+        with(instance)  {
+            physics_apply_local_impulse(0,0,500,-50);
+            dir=1;
+        }
+    } else {
+        with(instance) {
+            physics_apply_local_impulse(0,0,-500,-50);
+            dir=-1;
+        }
+    }
+    global.charge = global.charge - 10;
+    gundrawn=true;
+    sprite_index=spr_player_fire_gun;
+    image_speed=1/30;
+    image_index=1;
+    image_index=2;
 }
 
 </string>
@@ -1156,7 +1127,7 @@ jump(id);
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>1</PhysicsObjectLinearDamping>
   <PhysicsObjectAngularDamping>1</PhysicsObjectAngularDamping>
-  <PhysicsObjectFriction>1.25</PhysicsObjectFriction>
+  <PhysicsObjectFriction>1</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
