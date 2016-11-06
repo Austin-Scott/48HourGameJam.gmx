@@ -411,7 +411,7 @@ image_xscale=abs(image_xscale);
 }
 }
 }
-if(distance_to_object(obj_player)&lt;30)   {
+if(distance_to_object(obj_player)&lt;15)   {
 
 if(isfizzy)   {
 
