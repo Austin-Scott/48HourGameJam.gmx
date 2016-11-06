@@ -21,6 +21,7 @@
         <sprite>sprites\spr_player_standing</sprite>
         <sprite>sprites\spr_player_jump</sprite>
         <sprite>sprites\spr_player_die</sprite>
+        <sprite>sprites\spr_player_fire_gun</sprite>
       </sprites>
       <sprites name="placeholder">
         <sprite>sprites\spr_timeMachinePiece</sprite>
@@ -43,6 +44,9 @@
         <sprite>sprites\spr_enemyfiz_a</sprite>
         <sprite>sprites\spr_enemyfiz_b</sprite>
       </sprites>
+      <sprites name="misc">
+        <sprite>sprites\spr_lazer_bullet</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -54,7 +58,6 @@
     <script>scripts\fireGun.gml</script>
     <script>scripts\meleeAttack.gml</script>
   </scripts>
-  <fonts name="fonts"/>
   <objects name="objects">
     <objects name="Gameplay Objects">
       <object>objects\obj_enemy</object>
