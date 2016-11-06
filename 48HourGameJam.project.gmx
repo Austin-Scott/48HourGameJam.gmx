@@ -87,10 +87,7 @@
       <object>objects\obj_turnindicator</object>
     </objects>
     <objects name="ui">
-      <object>objects\btn_settings</object>
-      <object>objects\ts_settings</object>
       <object>objects\ts_title</object>
-      <object>objects\btn_back</object>
       <object>objects\ts_settings_b</object>
       <object>objects\ui_cutscene</object>
       <object>objects\btn_play</object>
