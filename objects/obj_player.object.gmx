@@ -56,7 +56,7 @@ melee=0; //0=no gun, 1=basic melee
 stunned = false;
 alive=true;
 gundrawn=false;
-
+walking=false;
 
 </string>
           </argument>
@@ -135,9 +135,15 @@ image_xscale=abs(image_xscale);
 image_xscale=-abs(image_xscale);
 }
 if(alive)   {
+if(gundrawn)   {
+if(image_index==0)   {
+image_speed=0;
+}
+}
 if(!stunned)   {
 if(keyboard_check(ord('A')))  {
-gundrawn=true;
+gundrawn=false;
+walking=true;
 if(can_jump)   {
 sprite_index = spr_player_walking;
 image_speed = 1/6;
@@ -149,7 +155,8 @@ image_speed=0;
 moveLeft(id);
 dir = -1;
 } else if(keyboard_check(ord('D')))  {
-gundrawn=true;
+gundrawn=false;
+walking=true;
 if(can_jump)   {
 sprite_index = spr_player_walking;
 image_speed = 1/6;
@@ -163,6 +170,7 @@ dir = 1;
 } else  {
 if(!gundrawn)    {
 sprite_index = spr_player_standing;
+walking=false;
 image_speed = 1/6;
 }
 
@@ -361,6 +369,7 @@ can_jump=false;
           <argument>
             <kind>1</kind>
             <string>///fireGun(id, dir)
+if(alive and !walking)  {
 instance=0;
 with (id) {
 instance=instance_create(phy_position_x,phy_position_y,obj_bullet);
@@ -377,6 +386,10 @@ dir=-1;
 }
 }
 gundrawn=true;
+sprite_index=spr_player_fire_gun;
+image_speed=1/30;
+image_index=2;
+}
 
 </string>
           </argument>

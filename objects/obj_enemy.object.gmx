@@ -422,9 +422,12 @@ vely=phy_linear_velocity_y;
 with(obj_control)  {
 currentmax=maxshake;
 }
+/*
 instance_change(obj_enemyFake,true);
 phy_linear_velocity_x=velx;
 phy_linear_velocity_y=vely;
+*/
+instance_destroy();
 
 
 } 
