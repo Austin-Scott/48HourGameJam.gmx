@@ -55,6 +55,7 @@ gun=0; //0=no gun, 1=basic gun
 melee=0; //0=no gun, 1=basic melee
 stunned = false;
 alive=true;
+gundrawn=false;
 
 
 </string>
@@ -136,6 +137,7 @@ image_xscale=-abs(image_xscale);
 if(alive)   {
 if(!stunned)   {
 if(keyboard_check(ord('A')))  {
+gundrawn=true;
 if(can_jump)   {
 sprite_index = spr_player_walking;
 image_speed = 1/6;
@@ -147,6 +149,7 @@ image_speed=0;
 moveLeft(id);
 dir = -1;
 } else if(keyboard_check(ord('D')))  {
+gundrawn=true;
 if(can_jump)   {
 sprite_index = spr_player_walking;
 image_speed = 1/6;
@@ -158,8 +161,10 @@ image_speed=0;
 moveRight(id);
 dir = 1;
 } else  {
+if(!gundrawn)    {
 sprite_index = spr_player_standing;
 image_speed = 1/6;
+}
 
 }
 } else  {
@@ -371,6 +376,8 @@ physics_apply_local_impulse(0,0,-500,-50);
 dir=-1;
 }
 }
+gundrawn=true;
+
 </string>
           </argument>
         </arguments>
@@ -558,6 +565,7 @@ meleeAttack(id, dir);
             <kind>1</kind>
             <string>if(alive)  {
 jump(id);
+gundrawn=false;
 }
 
 </string>
