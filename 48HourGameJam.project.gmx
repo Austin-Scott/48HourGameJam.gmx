@@ -6,25 +6,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_PlayerPlaceholder</sprite>
-    <sprite>sprites\spr_SolidPlaceholder</sprite>
-    <sprite>sprites\spr_SolidFizzel</sprite>
-    <sprites name="Enemy">
-      <sprite>sprites\spr_enemyPlaceHolder</sprite>
-      <sprite>sprites\spr_enemyfiz_a</sprite>
-      <sprite>sprites\spr_enemyfiz_b</sprite>
-    </sprites>
-    <sprite>sprites\spr_jumpindicator</sprite>
-    <sprite>sprites\spr_idleturnindicator</sprite>
-    <sprite>sprites\spr_placeholderbullet</sprite>
-    <sprite>sprites\spr_attackplaceholder</sprite>
-    <sprite>sprites\spr_spawnerPlaceholder</sprite>
-    <sprite>sprites\spr_gunPlaceholder</sprite>
-    <sprite>sprites\spr_meleePlaceholder</sprite>
-    <sprite>sprites\spr_SolidRampRight</sprite>
-    <sprite>sprites\spr_SolidRampLeft</sprite>
-    <sprite>sprites\spr_timePortal</sprite>
-    <sprite>sprites\spr_timeMachinePiece</sprite>
     <sprites name="ui">
       <sprite>sprites\play</sprite>
       <sprite>sprites\gear</sprite>
@@ -38,6 +19,29 @@
       <sprites name="player">
         <sprite>sprites\spr_player_walking</sprite>
         <sprite>sprites\spr_player_standing</sprite>
+        <sprite>sprites\spr_player_jump</sprite>
+        <sprite>sprites\spr_player_die</sprite>
+      </sprites>
+      <sprites name="placeholder">
+        <sprite>sprites\spr_timeMachinePiece</sprite>
+        <sprite>sprites\spr_timePortal</sprite>
+        <sprite>sprites\spr_gunPlaceholder</sprite>
+        <sprite>sprites\spr_SolidRampLeft</sprite>
+        <sprite>sprites\spr_PlayerPlaceholder</sprite>
+        <sprite>sprites\spr_SolidFizzel</sprite>
+        <sprite>sprites\spr_SolidPlaceholder</sprite>
+        <sprite>sprites\spr_jumpindicator</sprite>
+        <sprite>sprites\spr_idleturnindicator</sprite>
+        <sprite>sprites\spr_placeholderbullet</sprite>
+        <sprite>sprites\spr_spawnerPlaceholder</sprite>
+        <sprite>sprites\spr_attackplaceholder</sprite>
+        <sprite>sprites\spr_meleePlaceholder</sprite>
+        <sprite>sprites\spr_SolidRampRight</sprite>
+      </sprites>
+      <sprites name="enemy">
+        <sprite>sprites\spr_enemyPlaceHolder</sprite>
+        <sprite>sprites\spr_enemyfiz_a</sprite>
+        <sprite>sprites\spr_enemyfiz_b</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -50,6 +54,7 @@
     <script>scripts\fireGun.gml</script>
     <script>scripts\meleeAttack.gml</script>
   </scripts>
+  <fonts name="fonts"/>
   <objects name="objects">
     <objects name="Gameplay Objects">
       <object>objects\obj_enemy</object>
@@ -57,6 +62,7 @@
       <object>objects\obj_spawner</object>
       <object>objects\obj_solid</object>
       <object>objects\obj_player</object>
+      <object>objects\obj_control</object>
       <object>objects\obj_levelchange</object>
       <object>objects\nothing</object>
       <object>objects\obj_almost_solid</object>
@@ -69,6 +75,7 @@
       <object>objects\obj_melee</object>
       <object>objects\obj_pickupGun</object>
       <object>objects\obj_pickupMelee</object>
+      <object>objects\obj_turnindicator</object>
     </objects>
     <objects name="ui">
       <object>objects\btn_settings</object>
@@ -81,8 +88,6 @@
       <object>objects\ui_obj_timetravel</object>
       <object>objects\ui</object>
     </objects>
-    <object>objects\obj_control</object>
-    <object>objects\obj_turnindicator</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\main</room>
